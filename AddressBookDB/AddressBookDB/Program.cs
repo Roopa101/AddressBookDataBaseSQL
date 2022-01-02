@@ -22,9 +22,12 @@ namespace AddressBookDB
             model.Zip = "585401";
             model.PhoneNumber = "9901123984";
             model.Email = "roopa14@gmail.com";
-            if (addressBookRepo.AddContact(model))
-               Console.WriteLine("Record Added Successfully..");
-               Console.ReadLine();
+           // if (addressBookRepo.AddContact(model))
+            //   Console.WriteLine("Record Added Successfully..");
+
+            if (addressBookRepo.EditContact(model))
+                Console.WriteLine("Record Updated Successfully");
+            Console.ReadLine();
         }
     }
 }

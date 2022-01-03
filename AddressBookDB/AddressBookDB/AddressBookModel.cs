@@ -8,14 +8,14 @@ namespace AddressBookDB
 {
     public class AddressBookModel
     {
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        string address { get; set; }
-        string city { get; set; }
-        string State { get; set; }
-        string Zip { get; set; }
-        string PhoneNumber { get; set; }
-        string Email { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string address { get; set; }
+        public string city { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
 
     }
 }

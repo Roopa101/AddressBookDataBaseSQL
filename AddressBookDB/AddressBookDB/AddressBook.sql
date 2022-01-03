@@ -106,3 +106,9 @@ select * from AddressBook1
 SELECT COUNT(ContactType) 'Total Type'FROM AddressBook1 where ContactType = 'Friends';
 SELECT COUNT(ContactType) 'Total Type'FROM AddressBook1 where ContactType = 'Family';
 
+-------UC11-----
+
+insert into AddressBook1 values('Shrushti','Zample','Mulaj','Umerga','Maharashtra',654329,'9654387906','shrushti67@Email.com','Friends');
+insert into AddressBook1 values('Shrushti','Zample','Mulaj','Umerga','Maharashtra',654329,'9654387906','shrushti67@Email.com','Family');
+
+select * from AddressBook1

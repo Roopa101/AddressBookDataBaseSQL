@@ -87,6 +87,8 @@ select * from AddressBook1
 -----uc8-----
 
 Select * From AddressBook1 Where City = 'Kalaburagi' Order By Firstname
+
+
 Select * From AddressBook1 Where City = 'Pune' Order By Firstname
 
 
@@ -98,3 +100,9 @@ Update AddressBook1 Set ContactType = 'Family' Where Firstname = 'Roopa';
 Update AddressBook1 Set ContactType = 'Friends' Where PhoneNumber = '7020866219';
 
 select * from AddressBook1
+
+-------uc10-----
+
+SELECT COUNT(ContactType) 'Total Type'FROM AddressBook1 where ContactType = 'Friends';
+SELECT COUNT(ContactType) 'Total Type'FROM AddressBook1 where ContactType = 'Family';
+

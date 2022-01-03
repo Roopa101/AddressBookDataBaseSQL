@@ -1,8 +1,10 @@
-﻿create database AddressBookService
+﻿--------uc1------
+create database AddressBookService
 select name from sys.databases
 
 use AddressBookService
 
+-----uc2-----
 create Table AddressBook1
 (
 id int identity (1,1) primary key,
@@ -16,9 +18,11 @@ PhoneNumber varchar(15),
 Email varchar(35)
 );
 
-
+----uc3----
 select * from AddressBook1
 
+----uc4-----
+insert into AddressBook1 values('Shradha','Jadhav','Pune','Pune','Maharshtra','567439','9689519187','shradha@gmail.com')
 
 create procedure [dbo].[SpEditContact]
 (
@@ -37,14 +41,14 @@ update AddressBook1 set LastName=@LastName,address=@address,city=@city,State=@St
 where FirstName=@FirstName 
 end
 
+
 Update AddressBook1 set Lastname = 'Vishwakarma' where Firstname = 'Roopa';
 Update AddressBook1 set address = 'Aland' where Firstname = 'Roopa';
-
 
 select * from AddressBook1
 
 insert into AddressBook1 values('Shradha','Jadhav','Pune','Pune','Maharshtra','567439','9689519187','shradha@gmail.com')
-
+---uc5----
 create procedure [dbo].[SpDeleteContacts]
 (
 @FirstName varchar(255),
@@ -66,4 +70,9 @@ end
 Delete From AddressBook1 where Firstname = 'shradha'
 select * from AddressBook1
 
+insert into AddressBook1 values('Ganesh','Bhosale','Pune','Pune','Maharshtra','567384','7020866219','ganesh@gmail.com')
+
+----uc6---
+Select City From AddressBook1 Where Firstname = 'Roopa'
+Select State From AddressBook1 Where Firstname = 'Ganesh'
 

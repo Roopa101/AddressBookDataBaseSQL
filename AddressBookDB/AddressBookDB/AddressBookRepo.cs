@@ -131,8 +131,51 @@ namespace AddressBookDB
             }
             return false;
         }
+
+        public bool GetAllContact()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(connectionString);
+                // SqlConnection connection = new SqlConnection(connectionString);
+                AddressBookModel addressBookmodel = new AddressBookModel();
+                using (connection)
+                {
+                    string query = @"Select * from AddressBook1";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            addressBookmodel.FirstName = dr.GetString(1);
+                            addressBookmodel.LastName = dr.GetString(2);
+                            addressBookmodel.address = dr.GetString(3);
+                            addressBookmodel.city = dr.GetString(4);
+                            addressBookmodel.State = dr.GetString(5);
+                            addressBookmodel.Zip = dr.GetString(6);
+                            addressBookmodel.PhoneNumber = dr.GetString(7);
+                            addressBookmodel.Email = dr.GetString(8);
+                           // addressBookmodel.Id = dr.GetInt32(8);
+                            Console.WriteLine( addressBookmodel.FirstName + " " + addressBookmodel.LastName + " " + " " + addressBookmodel.address + " " + addressBookmodel.city + " " + addressBookmodel.State + " " + addressBookmodel.PhoneNumber + " " + addressBookmodel.Zip + " " + addressBookmodel.Email);
+                            Console.WriteLine("\n");
+                        }
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("No data found");
+                        return false;
+                    }
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
-
 }
-
    

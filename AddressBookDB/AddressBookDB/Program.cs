@@ -14,23 +14,28 @@ namespace AddressBookDB
 
             AddressBookModel model = new AddressBookModel();
             AddressBookRepo addressBookRepo = new AddressBookRepo();
-            model.FirstName = "Shradha";
-            model.LastName = "Jadhav";
-            model.address = "Pune";
-            model.city = "Pune";
-            model.State = "Maharashtra";
-            model.Zip = "5674639";
-            model.PhoneNumber = "9689519187";
-            model.Email = "shradha@gmail.com";
-           // if (addressBookRepo.AddContact(model))
+            model.FirstName = "Roopa";
+            model.LastName = "Jamadar";
+            model.address = "Khandal";
+            model.city = "Kalaburagi";
+            model.State = "Karnataka";
+            model.Zip = "585401";
+            model.PhoneNumber = "9901123984";
+            model.Email = "roopa14@gmail.com";
+            // if (addressBookRepo.AddContact(model))
             //   Console.WriteLine("Record Added Successfully..");
 
-          //  if (addressBookRepo.EditContact(model))
-            //    Console.WriteLine("Record Updated Successfully");
+           // if (addressBookRepo.EditContact(model))
+          //      Console.WriteLine("Record Updated Successfully");
 
-            if (addressBookRepo.DeleteContact(model))
-                Console.WriteLine("Record Deleted Successfully");
-            Console.ReadLine();
+           //  if (addressBookRepo.DeleteContact(model))
+            //    Console.WriteLine("Record Deleted Successfully");
+
+            if (addressBookRepo.GetAllContact())
+                Console.WriteLine(" Get all record Successfully");
+
+            
+
         }
     }
 }

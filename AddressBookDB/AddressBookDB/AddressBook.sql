@@ -76,3 +76,13 @@ insert into AddressBook1 values('Ganesh','Bhosale','Pune','Pune','Maharshtra','5
 Select City From AddressBook1 Where Firstname = 'Roopa'
 Select State From AddressBook1 Where Firstname = 'Ganesh'
 
+-----uc7-----
+
+
+Select COUNT (*) State From AddressBook1
+Select COUNT(*) City From AddressBook1
+select * from AddressBook1
+
+
+
+

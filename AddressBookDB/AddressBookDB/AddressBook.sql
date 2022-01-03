@@ -85,7 +85,5 @@ select * from AddressBook1
 
 
 -----uc8-----
+
 Select * From AddressBook1 Where City = 'Kalaburagi' Order By Firstname
-
-
-
